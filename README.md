@@ -11,9 +11,6 @@ A small **Streamlit** app that turns uploaded manipulation videos into a **weakl
 5. Clusters **all** intervals (across clips) into `K` pseudo-action classes.
 6. Assigns heuristic confidence from motion level, distance to cluster center, and temporal smoothness of features **within each clip**.
 
-## Why action-ish labels for robotics data
-
-Learning from video often needs **pairs** `(observation_t, observation_{t+1})` together with **something like an action** or transition label. Real robot actions are high-dimensional and embodiment-specific; this tool is a V0 pipeline to allow for future prototyping of dataset formats and training loops before using true teleop or controller logs.
 
 ## V0 baseline (this repo)
 
