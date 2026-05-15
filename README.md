@@ -13,7 +13,7 @@ A small **Streamlit** app that turns uploaded manipulation videos into a **weakl
 
 ## Why action-ish labels for robotics data
 
-Learning from video often needs **pairs** `(observation_t, observation_{t+1})` together with **something like an action** or transition label. Real robot actions are high-dimensional and embodiment-specific; this tool is a **cheap stand-in** so you can prototype dataset formats and training loops before you have true teleop or controller logs.
+Learning from video often needs **pairs** `(observation_t, observation_{t+1})` together with **something like an action** or transition label. Real robot actions are high-dimensional and embodiment-specific; this tool is a V0 pipeline to allow for future prototyping of dataset formats and training loops before using true teleop or controller logs.
 
 ## V0 baseline (this repo)
 
@@ -49,12 +49,6 @@ Each line is one consecutive frame pair:
 
 `latent_actions.npy` is a 2-column array: `[latent_action_id, confidence]` per row, in the same order as lines in `dataset.jsonl`.
 
-## Limitations
-
-- **Not** true robot actions or task labels.
-- **No** embodiment retargeting or calibrated cameras.
-- **Confidence** is a hand-designed proxy, not a calibrated probability.
-- Intended as a **fast local prototype**; quality depends on lighting, background motion, and FPS.
 
 ## Project layout
 
